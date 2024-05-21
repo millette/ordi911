@@ -1,0 +1,26 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "exclude": [
+    "dist"
+  ],
+  "compilerOptions": {
+    "target": "ES2022",
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "baseUrl": ".",
+    "paths": {
+      "!assets/*": [
+        "src/assets/*"
+      ],
+      "!layouts/*": [
+        "src/layouts/*"
+      ],
+      "!components/*": [
+        "src/components/*"
+      ],
+      "!solid/*": [
+        "src/components/solid/*"
+      ]
+    }
+  }
+}

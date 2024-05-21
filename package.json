@@ -1,0 +1,40 @@
+{
+  "name": "ordi911",
+  "type": "module",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=18.19.1",
+    "npm": ">=10.5.0",
+    "pnpm": ">=9.1.2"
+  },
+  "packageManager": "pnpm@9.1.2",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "tsc --noEmit && astro check && astro build",
+    "check": "astro check",
+    "check:tsc": "tsc --noEmit",
+    "check:all": "tsc --noEmit && astro check",
+    "preview": "astro preview",
+    "go": "tsc --noEmit && astro check && astro build && astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.7.0",
+    "@astrojs/solid-js": "^4.2.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.8.6",
+    "astro-devtool-breakpoints": "^0.3.0",
+    "sharp": "^0.33.4",
+    "solid-js": "^1.8.17",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.13",
+    "@types/node": "^18.19.33",
+    "daisyui": "^4.11.1",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.5"
+  }
+}
