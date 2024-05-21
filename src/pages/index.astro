@@ -1,24 +1,259 @@
 ---
-// self
-import Hello from "!solid/hello.tsx"
-import ThemeSwitcher from "!components/theme-switcher.astro"
-import Breakpoints from "!components/breakpoints.astro"
+// astro
+import { Image, getImage } from "astro:assets"
+
+// images
+import myImage from "../assets/computersteth.jpg"
+import sickPc from "../assets/SICK-PC-FIN_d400.jpg"
+import annonce911 from "../assets/911-annonce.jpg"
+import ordiSecours from "../assets/CARTE-ordi-secours_d400.jpg"
+import captainRepair from "../assets/1bd91700c66b4c6499c2_Copie-de-Affiche-NUM.jpeg"
+import reparateurCertifie from "../assets/6b0661ba0a1f480988bb_Copie-de-Copie-de-Stickers-vitrine-15x15.jpeg"
+import pcCheck from "../assets/pc-chk.gif"
+
+
+import win95 from "../assets/95.gif"
+import forever from "../assets/forever.gif"
+import heat from "../assets//heat-computers-527964.gif"
+import virus from "../assets/vir-b.gif"
+
+
+
+const optimizedBackgroundImage = await getImage({ src: myImage })
 ---
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Add content for SEO purposes." />
-		<title>Astro</title>
-	</head>
-	<body>
-		<Breakpoints />
-		<ThemeSwitcher />
-		<div class="container my-4">
-			<h1 class="text-4xl font-bold">Astro</h1>
-			<Hello name="Bob" />
-		</div>
-	</body>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Ordi 911</title>
+  </head>
+
+  <body>
+    <div class="hero min-h-screen" style={`background-image: url('${optimizedBackgroundImage.src}');`}>
+      <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-center text-neutral-content">
+          <div class="max-w-md">
+          <h1 class="mb-5 text-5xl font-bold">Ordi 911</h1>
+          <p class="my-5">Réparation d'ordinateur à domicile ou à distance</p>
+          <p class="my-5">Nous trouvons le problème ou vous ne payez rien</p>
+          <a href="tel:5149943039" class="btn btn-primary">514 994 3039</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="prose max-w-none">
+
+        <div class="md:grid gap-4 grid-cols-2">
+
+          <div>
+            <h2>Bienvenue chez Ordi 911</h2>
+
+            <p>Depuis 2005, nous réglons vos problèmes informatique chez vous, que ce soit pour votre ordinateur, laptop, imprimante, tablette, téléphone etc.</p>
+
+            <p>Vous n'avez pas à vous déplacer, rien à débrancher et rebrancher; nous effectuons le travail devant vous.</p>
+
+            <p>Nous pouvons aussi réparer à distance si votre connexion internet est fonctionnelle.</p>
+
+            <p>Environ 70 % des problèmes se réparent en 1 heure ou moins
+            et 95 % en 2 heures ou moins.
+            Inutile donc de laisser votre appareil dans un atelier ou un magasin ou il restera au minimum une semaine avant de le récupérer.</p>
+
+            <p>Nos délais d'intervention varient entre 1h et 48h; dans la pratique, nous sommes généralement sur place le jour même ou le lendemain.</p>
+          </div>
+          <Image width={600} src={sickPc} alt="Sick PC" />
+        </div>
+
+        <h3>Captain repair</h3>
+
+        <p>Nous pouvons également réparer vos tablettes et téléphones, écrans cassés et autres bobos.</p>
+
+        <div class="md:grid gap-4 grid-cols-2">
+          <div>
+
+
+            <Image width={600} src={captainRepair} alt="Captain Repair" />
+
+        <p>Votre téléphone a glissé et sa vitre a pris l'apparence d'un casse-tête? Le bouton de votre tablette ne répond plus? Nous sommes certifiés Captain Repair et réparons vos appareils.</p>
+
+          </div>
+          <div>
+
+
+            <Image width={600} src={reparateurCertifie} alt="Certifié Captain Repair" />
+
+        <p>Nous pouvons réparer chez vous, à votre travail ou à notre atelier. À noter qu'un délais est à prévoir pour la commande et la réception de vos pièces.</p>
+
+      </div>
+    </div>
+
+        <h3>Questions Posées Fréquement</h3>
+
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div>
+
+            <h4>Quels services offrez-vous?</h4>
+
+            <p>Nous réparons principalement les problèmes reliés aux systèmes Microsoft (Windows) tels que virus, malwares, ralentissements,  internet, wifi, logiciels, formatage, périphériques, imprimantes ainsi que les pannes matérielles. Nous pouvons également réparer les écrans et autres pannes de vos tablettes et téléphones.</p>
+          </div>
+
+          <div>
+            <h4>Pourquoi un service à domicile?</h4>
+
+            <p>Pour votre confort</p>
+
+            <ol>
+              <li>Rien à débrancher</li>
+              <li>Pas besoin de vous déplacer</li>
+              <li>Pas de délais: Un magasin (ou atelier)
+              prendra une semaine minimum pour
+              arranger votre appareil.</li>
+              <li>Pas de pertes de données : Ils ont
+              tendance à formater (tout effacer) quel
+              que soit le problème</li>
+              <li>Nous ne formatons qu'en dernier recours
+              (ou si vous le demandez)</li>
+            </ol>
+
+          </div>
+
+          <div>
+            <h4>Pourquoi Ordi 911?</h4>
+
+            <p>Nous sommes présents depuis 2005 avec des milliers de réparations à notre actif. Nous ne sommes pas une grosse entreprise et préférons offrir un service personnalisé. Notre politique est toujours restée la même:</p>
+            <p>Nous trouvons le problème ou vous ne payez rien!</p>
+          </div>
+
+          <div>
+            <h4>Quel secteur couvrez-vous?</h4>
+            <p>Nous sommes situés à Beloeil et couvrons la rive-sud de Montréal. Vous comprendrez sans peine que nous préférons éviter la traversée des ponts. Nous offrons avec notre compagnie jumelle un service parallèle pour la région de Saint Hyacinthe:</p>
+            <p>Ordi-secours au <a href="tel:4507790019" class="link">450&nbsp;779&nbsp;0019</a></p>
+          </div>
+
+          <div>
+            <h4>Quels sont les tarifs?</h4>
+
+            <p>Pour les environs immédiats (Beloeil, St&nbsp;Hilaire, St&nbsp;Basile, St&nbsp;Bruno, Ste&nbsp;Julie...) le tarif pour une heure ou moins est de $75.00 déplacement inclus. Si la réparation prend plus de temps, le tarif est dégressif et $10.00 du quart d'heure seront ajoutés : ($85 pour 1h 15, $95.00 pour 1h30...)</p>
+            <p>Pour les endroits plus éloignés, un léger supplément  peut intervenir.</p>
+            <p>Nous acceptons argent, chèque, virement bancaire, cartes débit et crédit.</p>
+          </div>
+
+          <div>
+            <h4>Quelles sont vos horaires?</h4>
+            <p>Nous sommes ouvert du lundi au vendredi de 10h à 18h et le samedi de 11h à 17h.</p>
+            <p>Le temps d'attente est variable mais la plupart des réparations sont effectuées le jour même ou le lendemain.</p>
+
+            <p>Les interventions sur tablettes et téléphones peuvent demander un délais supplémentaire compte tenu du temps à allouer pour recevoir les pièces.</p>
+          </div>
+
+          <div>
+            <h4>Si mon ordinateur est irréparable?</h4>
+
+            <p>Si votre appareil est physiquement hors d'usage ou coûterait trop cher à réparer, nous pouvons vous guider sur l'achat d'un nouveau dans un magasin. Dans certains cas, pour une solution plus économique, nous pouvons vous proposer un ordinateur reconditionné.  Si désiré, nous acheminerons gratuitement le vieil appareil vers un centre de recyclage et détruirons sans frais vos données afin qu'elles deviennent irrécupérables.</p>
+
+          </div>
+
+          <div>
+            <h4>Offrez vous une garantie?</h4>
+
+            <p>Sur les pièces et main-d'oeuvre bien sur, mais aucun service de réparation informatique n'offre de garantie sur la logistique.</p>
+            <p>Vous pourriez malheureusement faire une fausse manoeuvre ou attraper un malware après notre visite. Le fait que nous soyons sur place vous permet par contre de tester votre ordinateur avant notre départ et vous assurer de visu que tout fonctionne.</p>
+
+          </div>
+
+          <div>
+            <h4>Comment procéder?</h4>
+            <p>Il suffit d'appeler ou texter au
+              <a href="tel:5149943039" class="link">514&nbsp;994&nbsp;3039</a>.</p>
+            <p>Pour le paiement, nous acceptons argent, cartes débit, Interac, chèque, virement bancaire, Visa, Mastercard et American express.</p>
+          </div>
+        </div>
+
+        <Image class="m-auto" src={pcCheck} alt="PC Check" />
+
+
+        <h3>Questions posées moins fréquement</h3>
+
+        <div class="not-prose grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+
+
+          <div class="card card-compact bg-base-100 shadow-xl">
+            <figure><Image src={forever} alt="Mon ordinateur semble plus lent" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Mon ordinateur semble plus lent</h2>
+              <p>Les causes peuvent être multiples, souvent logicielles, parfois matérielles. La première étape sera de vérifier si le systeme n'est pas infecté.</p>
+            </div>
+          </div>
+
+
+
+          <div class="card card-compact bg-base-100 shadow-xl">
+            <figure><Image src={heat} alt="Mon ordinateur surchauffe" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Mon ordinateur surchauffe</h2>
+              <p>Dans ce cas, le matériel devrait être vérifié en premier lieu. Il est à noter que la chaleur a une incidence importante sur la durée de vie d'un ordinateur.</p>
+            </div>
+          </div>
+
+
+          <div class="card card-compact bg-base-100 shadow-xl">
+            <figure><Image src={virus} alt="J'ai un anti-virus, pourquoi suis-je infecté?" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">J'ai un anti-virus, pourquoi suis-je infecté?</h2>
+              <p>Malheureusement, l'anti-virus 100% n'existe pas. Vous pourriez être le meilleur pilote avec la meilleure voiture du monde, si vous roulez sur un clou, vous risquez une crevaison.</p>
+
+            </div>
+          </div>
+
+
+
+
+          <div class="card card-compact bg-base-100 shadow-xl">
+            <figure><Image src={win95} alt="Est-il temps de changer d'ordinateur?" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Est-il temps de changer d'ordinateur?</h2>
+              <p>Il serait plus utile de se demander: fait-il ce dont j'ai besoin? Le prix d'un nouvel appareil vaut-il les quelques secondes que je gagne? Également, un formatage de l'ordinateur à zéro lui redonnera toute sa vigueur de jeunesse.</p>
+
+            </div>
+          </div>
+
+
+        </div>
+
+            <h3>Une alternative:</h3>
+
+            <p>Nous offrons également un service de réparation à distance. Si votre ordinateur s'allume et que vous avez un accès internet, nous pouvons opérer sans être sur place. Le coût est de $50.00 pour une heure ou moins et sera tarifié par carte de crédit ou virement bancaire.</p>
+
+        <h4>En vrac</h4>
+
+        <div class="md:grid gap-4 grid-cols-2">
+
+          <p>La première chose à faire (et la plus importante) est une sauvegarde de vos dossiers personnels.
+          Copiez sur un disque externe ou une clé usb vos dossiers
+          image /documents /bureau /musique /vidéo /favoris /téléchargements
+          afin qu'ils soient toujours à deux endroits!</p>
+
+          <ol>
+            <li>Nous offrons sporadiquement et à la demande des ordinateurs reconditionnés/livré/installé.
+            <li>Nous enseignons volontier certaines techniques et manipulations logicielles.
+            <li>Si vous préferez, nous irons chercher votre appareil à votre domicile ou votre lieu de travail et le rapporterons une fois réparé, ou vous pouvez l'apporter à notre atelier de Beloeil.
+          </ol>
+        </div>
+
+        <div class="md:grid gap-4 grid-cols-2">
+          <div>
+            <h3>Beloeil-rive-sud</h3>
+            <Image width={500} src={annonce911} alt="Ordi 911" />
+
+          </div>
+          <div>
+            <h3>St Hyacinthe</h3>
+            <Image width={500} src={ordiSecours} alt="Ordi-Secours" />
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
